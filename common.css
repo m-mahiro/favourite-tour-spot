@@ -1,0 +1,169 @@
+/* ----- 基本設定 ----- */
+
+:root {
+	--theme-color: #f5ca67;
+	--theme-color-dark: #9f823d;
+	--theme-color-light: #ece3ca;
+	--accent-color: #b76726;
+	
+	--main-font-color: black;
+	
+	--theme-font-family: 'Zen Maru Gothic';
+	--yuru-font-family: "Zen Kurenaido";
+	
+	--v-small-space: clamp(30px, 1vw, 40px);
+	--v-space: clamp(90px, 3vw, 120px);
+	--v-big-space: clamp(270px, 9vw, 360px);
+	font-size: clamp(1rem, 1vh, 2rem);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: var(--main-font-color);
+	font-family: "Zen Maru Gothic", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+h1 {
+	font-family: var(--yuru-font-family), sans-serif;
+	font-size: 2rem;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.w-container {
+	width: 100%;
+	max-width: min(92%, 1166px);
+	margin: auto;
+}
+
+.heading-decoration::after {
+	display: block;
+	height: 0;
+	width: clamp(100px, 10vh, 500px);
+	margin-top: 0.6em;
+	border-top: solid 1px var(--accent-color);
+	content: '';
+}
+
+.heading-decoration + p {
+	margin: 0.6em 0;
+}
+
+/* ---------- ヘッダー ---------- */
+header {
+	/*background-color: var(--theme-color);*/
+	color: var(--main-font-color);
+	height: 5rem;
+	width: 100%;
+	align-content: center;
+}
+
+header h1 {
+	font-size: 2.5rem;
+	letter-spacing: 0.2em;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* ---------- エントリーイメージ ---------- */
+
+.entry-img {
+	height: clamp(300px, 30vh, 500px);
+	overflow: hidden;
+}
+
+.entry-img img {
+	height: 100%;
+	object-fit: cover;
+}
+
+
+/* ---------- エントリーテキスト ---------- */
+
+.entry-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: var(--v-small-space) 0;
+	background-color: var(--theme-color-light);
+}
+
+.entry-text .heading-decoration::after {
+	width: 300px;
+	border-color: var(--theme-color-dark);
+	border-width: 2px;
+	margin-right: 1em;
+	/*
+	`entry-text h1`の右側にマイナスマージンを入れた影響でh1全体が右に動いたので、
+	::afterだけ元に戻すために、margin-rightを1emにする。
+	*/
+}
+
+.entry-text h1 {
+	font-size: 3em;
+	letter-spacing: 1em;
+	margin-right: -1em;
+	/*
+	letter-spacingを付けた場合最後の文字の右にも余白が付くので
+	右側に同じ数だけマイナスマージン
+	https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14244517679
+	 */
+}
+.entry-text p {
+	font-size: 1.5em;
+}
+
+
+/* ---------- 画像とテキスト ---------- */
+
+.imgtext {
+	width: 100%;
+}
+
+.imgtext-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: var(--v-small-space);
+	margin: var(--v-space) 0;
+}
+
+.imgtext-container h2  {
+	font-size: 1.5em;
+}
+
+.imgtext-container > .img {
+	aspect-ratio: 16/9;
+}
+
+@media screen and (min-width: 768px) {
+	.imgtext-container {
+		flex-direction: row;
+		align-items: center;
+	}
+	
+	.imgtext-container > .text {
+		flex: 1;
+		min-width: 20em;
+	}
+	
+	.imgtext-container > .img {
+		flex: 2
+	}
+	
+	.imgtext-container.reverse {
+		flex-direction: row-reverse;
+	}
+}
