@@ -13,7 +13,7 @@
 	
 	--v-small-space: clamp(30px, 1vw, 40px);
 	--v-space: clamp(90px, 3vw, 120px);
-	--v-big-space: clamp(270px, 9vw, 360px);
+	--v-big-space: clamp(100px, 6vw, 240px);
 	font-size: clamp(1rem, 1vh, 2rem);
 }
 
@@ -69,8 +69,24 @@ header h1 {
 
 .header-container {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+}
+
+
+/* ---------- ロゴ ----------*/
+.logo {
+	height: 2.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+.logo figure {
+	height: 2.5rem;
+}
+.logo img {
+	height: 100%;
+	width: auto;
 }
 
 /* ---------- エントリーイメージ ---------- */
@@ -95,6 +111,7 @@ header h1 {
 	text-align: center;
 	padding: var(--v-small-space) 0;
 	background-color: var(--theme-color-light);
+	margin-bottom: var(--v-big-space);
 }
 
 .entry-text .heading-decoration::after {
@@ -137,7 +154,6 @@ header h1 {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	gap: var(--v-small-space);
 	margin: var(--v-space) 0;
 }
 
@@ -150,13 +166,14 @@ header h1 {
 }
 
 .imgtext-container .heading-decoration+p {
-	margin: 2em 0;
+	margin: 2em 0 1em;
 }
 
 
 @media screen and (min-width: 768px) {
 	.imgtext-container {
 		flex-direction: row;
+		gap: var(--v-small-space);
 		align-items: center;
 	}
 	
@@ -179,13 +196,14 @@ header h1 {
 
 .accesses {
 	background-color: var(--theme-color-light);
-	padding: var(--v-space) 0;
+	padding: var(--v-space) 0 var(--v-small-space);
+	margin-top: calc(var(--v-big-space) + 0.8em);
 	align-items: center;
 }
 .accesses .heading {
 	position: relative;
 	top: calc(-1 * (var(--v-space) + 0.8em));
-	font-size: 5rem;
+	font-size: clamp(3rem, 7vh, 5rem);
 	min-height: 0;
 	font-weight: 300;
 	margin-bottom: calc(-1 * var(--v-space));
@@ -256,3 +274,12 @@ a[target="_blank"]::after {
 }
 
 
+/* ---------- フッター ---------- */
+
+footer {
+	height: 200px;
+	color: white;
+	padding: var(--v-small-space) 0;
+	text-align: center;
+	
+}
