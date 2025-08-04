@@ -40,7 +40,7 @@ img {
 .w-container {
 	width: 100%;
 	max-width: min(92%, 1166px);
-	margin: auto;
+	margin: 0 auto;
 }
 
 .heading-decoration::after {
@@ -173,3 +173,86 @@ header h1 {
 		flex-direction: row-reverse;
 	}
 }
+
+
+/* ---------- アクセスのコンテナ ---------- */
+
+.accesses {
+	background-color: var(--theme-color-light);
+	padding: var(--v-space) 0;
+	align-items: center;
+}
+.accesses .heading {
+	position: relative;
+	top: calc(-1 * (var(--v-space) + 0.8em));
+	font-size: 5rem;
+	min-height: 0;
+	font-weight: 300;
+	margin-bottom: calc(-1 * var(--v-space));
+}
+
+.access-container {
+	display: grid;
+	gap: 27px
+}
+
+@media screen and (min-width: 768px) {
+	.access-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.access {
+	padding: 60px 27px;
+	border-radius: 20px;
+	background-color: white;
+}
+
+/*　---------- アクセス一つ一つのパーツ ----------*/
+.access h3 {
+	font-size: 2rem;
+	margin-bottom: 1em;
+}
+
+.access .desc {
+	margin-bottom: 4em;
+}
+
+.access .travel-time {
+	font-weight: bold;
+	margin: 1em 0;
+	font-size: 1.5em;
+}
+
+.access .btn {
+	display: block;
+	padding: 10px;
+	border-radius: 5px;
+	color: var(--accent-color);
+	font-weight: bold;
+	background-color: var(--theme-color-light);
+	text-align: center;
+	text-decoration: none;
+}
+
+a[target="_blank"]::after {
+	content: " \f35d";
+	font-family: "Font Awesome 5 Free", sans-serif;
+}
+
+
+/* ---------- アクセスマップ ---------- */
+
+.map-container {
+	width: 100%;
+	margin: var(--v-space) 0;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.access-map iframe {
+	width: 80%;
+	aspect-ratio: 4/3;
+}
+
+
