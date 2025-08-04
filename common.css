@@ -46,21 +46,18 @@ img {
 .heading-decoration::after {
 	display: block;
 	height: 0;
-	width: clamp(100px, 10vh, 500px);
+	width: clamp(100px, 10vw, 200px);
 	margin-top: 0.6em;
 	border-top: solid 1px var(--accent-color);
 	content: '';
 }
 
-.heading-decoration + p {
-	margin: 0.6em 0;
-}
 
 /* ---------- ヘッダー ---------- */
 header {
-	/*background-color: var(--theme-color);*/
+	background-color: var(--theme-color-light);
 	color: var(--main-font-color);
-	height: 5rem;
+	height: 6rem;
 	width: 100%;
 	align-content: center;
 }
@@ -101,7 +98,7 @@ header h1 {
 }
 
 .entry-text .heading-decoration::after {
-	width: 300px;
+	width: clamp(100px, 200vw, 300px);
 	border-color: var(--theme-color-dark);
 	border-width: 2px;
 	margin-right: 1em;
@@ -126,6 +123,10 @@ header h1 {
 }
 
 
+.entry-text .heading-decoration+p {
+	margin: 0.6em 0;
+}
+
 /* ---------- 画像とテキスト ---------- */
 
 .imgtext {
@@ -144,9 +145,14 @@ header h1 {
 	font-size: 1.5em;
 }
 
-.imgtext-container > .img {
+.imgtext-container img {
 	aspect-ratio: 16/9;
 }
+
+.imgtext-container .heading-decoration+p {
+	margin: 2em 0;
+}
+
 
 @media screen and (min-width: 768px) {
 	.imgtext-container {
