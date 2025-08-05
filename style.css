@@ -43,16 +43,6 @@ img {
 	margin: 0 auto;
 }
 
-.heading-decoration::after {
-	display: block;
-	height: 0;
-	width: clamp(100px, 10vw, 200px);
-	margin-top: 0.6em;
-	border-top: solid 1px var(--accent-color);
-	content: '';
-}
-
-
 /* ---------- ヘッダー ---------- */
 header {
 	background-color: var(--theme-color-light);
@@ -64,7 +54,6 @@ header {
 
 header h1 {
 	font-size: 2.5rem;
-	letter-spacing: 0.2em;
 }
 
 .header-container {
@@ -134,21 +123,19 @@ header h1 {
 	margin-bottom: var(--v-big-space);
 }
 
-.entry-text .heading-decoration::after {
+.entry-text .heading-decoration::before {
+	display: block;
+	height: 0;
 	width: clamp(100px, 200vw, 300px);
-	border-color: var(--theme-color-dark);
-	border-width: 2px;
-	margin-right: 1em;
-	/*
-	`entry-text h1`の右側にマイナスマージンを入れた影響でh1全体が右に動いたので、
-	::afterだけ元に戻すために、margin-rightを1emにする。
-	*/
+	margin: 1em 0 0.6em;
+	border-top: solid 2px var(--accent-color);
+	content: '';
 }
 
-.entry-text h1 {
+.entry-text .title {
 	font-size: 3em;
-	letter-spacing: 1em;
-	margin-right: -1em;
+	letter-spacing: 0.5em;
+	margin-right: -0.5em;
 	/*
 	letter-spacingを付けた場合最後の文字の右にも余白が付くので
 	右側に同じ数だけマイナスマージン
@@ -185,6 +172,16 @@ header h1 {
 	aspect-ratio: 16/9;
 }
 
+.imgtext-container .heading-decoration::after {
+	display: block;
+	height: 0;
+	width: clamp(100px, 10vw, 200px);
+	margin-top: 0.6em;
+	border-top: solid 1px var(--accent-color);
+	content: '';
+}
+
+
 .imgtext-container .heading-decoration+p {
 	margin: 2em 0 1em;
 }
@@ -197,12 +194,12 @@ header h1 {
 		align-items: center;
 	}
 	
-	.imgtext-container > .text {
+	.imgtext-container>.text {
 		flex: 1;
 		min-width: 20em;
 	}
 	
-	.imgtext-container > .img {
+	.imgtext-container>.img {
 		flex: 2
 	}
 	
@@ -325,15 +322,15 @@ a[href^="https://"]::after {
 		gap: 20px;
 	}
 	
-	.footer-container > .footer-site {
+	.footer-container>.footer-site {
 		margin-bottom: 20px;
 	}
 	
-	.footer-container > *:not(.footer-sns) {
+	.footer-container>*:not(.footer-sns) {
 		justify-self: start;
 	}
 	
-	.footer-container > .footer-sns {
+	.footer-container>.footer-sns {
 		grid-column: 2;
 		grid-row: 1 / 4;
 		justify-self: end;
@@ -388,4 +385,127 @@ a[href^="https://"]::after {
 
 .footer li {
 	list-style: none;
+}
+
+.slider {
+	position: relative;
+	width: 100%;
+	max-width: 3951px;
+	/* 元画像の幅 */
+	aspect-ratio: 3951 / 1692;
+	/* 比率固定 */
+	overflow: hidden;
+}
+
+.slider img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 9s;
+	/* 3秒 × 3枚 */
+}
+
+.slider img:nth-child(1) {
+	animation-name: fade1;
+	animation-duration: 9s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.slider img:nth-child(2) {
+	animation-name: fade2;
+	animation-duration: 9s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.slider img:nth-child(3) {
+	animation-name: fade3;
+	animation-duration: 9s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes fade1 {
+	
+	0%,
+	25% {
+		opacity: 1;
+	}
+	
+	35%,
+	90% {
+		opacity: 0;
+	}
+	
+	95%,
+	100% {
+		opacity: 1;
+	}
+	
+	/* ループ直前に少しだけ復活 */
+}
+
+@keyframes fade2 {
+	
+	0%,
+	30% {
+		opacity: 0;
+	}
+	
+	40%,
+	55% {
+		opacity: 1;
+	}
+	
+	65%,
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade3 {
+	
+	0%,
+	60% {
+		opacity: 0;
+	}
+	
+	70%,
+	85% {
+		opacity: 1;
+	}
+	
+	95%,
+	100% {
+		opacity: 0;
+	}
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+	.slider {
+		max-width: 100%;
+		/* aspect-ratioは指定せず、高さを固定または自動に */
+		height: auto;
+		position: relative;
+		/* 画像は絶対配置だから親の高さ必要 */
+		padding-top: calc(1692 / 3951 * 100%);
+		/* アスペクト比を高さとして確保 */
+	}
+	
+	.slider img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }

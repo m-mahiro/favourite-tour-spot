@@ -1,14 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+	<title>観光案内サイト</title>
+	
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>おすすめ観光地</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="logo.png" type="image/png">
+	
+	<!-- オープングラフ関係 -->
+	<meta name="og:title" content="色川 | おさんぽ">
+	<meta name="og:description" content="
+		ここはこのサイトの説明を書くところ。特にこだわりが内なら、AIで生成しちゃえ。
+		文章の長さは、大体これくらいかこれの2倍ぐらい
+	">
+	
+	<!-- CSS関係 -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-irokawa.css">
+	
+	<!-- フォント・アイコン関係 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Maru+Gothic&display=swap">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
+	
 </head>
-
 <body>
+<header>
+	<div class="header-container w-container">
+		<div class="logo">
+			<figure class="logo-img">
+				<img src="logo.png" alt="猫が歩いているアイコン" height="868" width="868">
+			</figure>
+			<h1>おさんぽ</h1>
+		</div>
+		
+		<i class="fas fa-bars menu-icon"></i>
+	</div>
+</header>
+
+<div class="slider">
+  <img src="yamada/TK2.jpg" alt="四国地方1" />
+  <img src="yamada/TK1.jpg" alt="四国地方2" />
+  <img src="yamada/TT.jpg" alt="四国地方3" />
+</div>
+
+<div class="entry-text">
+	<h1 class="title">四国地方</h1>
+	<p class="heading-decoration">香川県西部</p>
+</div>
+
+
+<section class="imgtext w-container">
+	<div class="imgtext-container">
+		<div class="text">
+			<h2 class="heading-decoration">瀬戸内に浮かぶ、空の鏡</h2>
+			
+			<!--
+			とくにこだわりがないのなら、AIに生成させちゃえ。その方が全体で統一感出るしね。
+			以下の写真を添付して、以下のプロンプトを使ってください。上手くいかなければ僕はGeminiを使ったので試してみて！
+			
+「自然の閑けさを感じる」の説明文を、70字程度の長さで生成して。
+上品で、すこし古風で、わびさびを感じられる、美しい日本語にしてください。
+また、添付した画像はこの説明文に付属するものですので、この写真の雰囲気も踏襲してください。
+例えば、「都会の喧騒を忘れる」なら、「山懐の宵闇に、障子越しの灯りが温かく浮かびます。
+縁側で聞こえるのは、遠い虫の音ばかり。時の流れを忘れ、ただ静かに更けゆく夜に身を委ねる。
+そんな心安らぐひとときが、ここにあります。」などといった文章で、「自然の静けさを感じる」なら、
+「岩間を縫う清らかな川のせせらぎに、心が洗われるよう。苔生した石垣は悠久の時を経て、
+すっかり自然の風景に溶け込みます。ただ佇むだけで満たされる、穏やかな時間がここに流れています。」
+などといった文章を生成してください。
+
+
+			
+			-->
+			
+			<p>
+				やわらかな潮風が肌を撫で、空と海の境がゆるやかに溶けていく。
+波音さえ遠く、ただ夕暮れが、<br>そっと水面に寄り添う。
+ゆっくりと暮れてゆく空の下、心もまた、静かにほどけていく――。<br>
+ここは、時間がやさしく流れる場所。
+			</p>
+		</div>
+		<figure class="img">
+			<img src="TT.jpg" alt="父母ヶ浜" width="4032" height="2268">
+		</figure>
+	</div>
+	<div class="imgtext-container reverse">
+		<div class="text">
+			<h2 class="heading-decoration">空に一番近い、祈りの場所</h2>
+			<p>
+				稲積山の頂に立つ、一本の鳥居。
+その向こうに<br>広がるのは、瀬戸内の海と街を包み込む、<br>やわらかな夕暮れ。
+虫の音が微かに響く山懐で、<br>
+ただ静かに、日が沈みゆく空を見つめる――。<br>
+時間も言葉もいらない、
+心が静かに澄みわたって<br>いく場所が、ここにあります。
+			</p>
+			
+		</div>
+		<figure class="img">
+			<img src="TK1.jpg" alt="高屋神社" width="4032" height="2268">
+		</figure>
+	</div>
+</section>
+
+
+<section class="accesses">
+	<div class="w-container">
+		
+		<h2 class="heading">アクセス</h2>
+		
+		
+		<div class="access-container">
+			
+			<div class="access">
+				<h3>和歌山市から</h3>
+				<p class="desc">淡路島を経由するルート</p>
+				<p class="travel-time">5時間</p>
+				<a href="https://maps.app.goo.gl/LxvM3VNqzemnJn5V8" target="_blank" class="btn">ルートを確認する</a>
+			</div>
+			
+			<div class="access">
+				<h3>和歌山市から</h3>
+				<p class="desc">瀬戸大橋を経由するルート</p>
+				<p class="travel-time">5時間</p>
+				<a href="https://maps.app.goo.gl/CKPRCiAMsCTuEkjM7" target="_blank" class="btn">ルートを確認する</a>
+			</div>
+			
+			<div class="access">
+				<h3>和歌山市から</h3>
+				<p class="desc">電車を利用するするルート</p>
+				<p class="travel-time">5時間半</p>
+				<a href="https://maps.app.goo.gl/t3g2PLLW2QNahR3T9" target="_blank" class="btn">ルートを確認する</a>
+			</div>
+			
+		</div>
+		<div class="map-container">
+			
+			<div class="access-map">
+			
+<!--				iframeは、そのままコピペせずに、widthとheightを削除してください。 -->
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d813535.9806568986!2d134.72451815935517!3d34.19818286079806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35517817afcab1b5%3A0x8fea83b66ddc84a1!2z54i25q-N44O25rWc!5e0!3m2!1sja!2sjp!4v1754360784839!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			
+		</div>
+
+	</div>
+
+</section>
+
+
+<footer class="footer">
+	<div class="footer-container w-container">
+		<div class="footer-site">
+			<a href="index.html">
+				<div class="logo">
+					<figure class="logo-img">
+						<img src="logo.png" alt="猫が歩いているアイコン" height="868" width="868">
+					</figure>
+					<h1>おさんぽ</h1>
+				</div>
+			</a>
+		</div>
+		
+		<ul class="footer-sns">
+			<li>
+				<a href="#">
+					<i class="fab fa-twitter"></i>
+					<span class="sr-only">Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fab fa-facebook-f"></i>
+					<span class="sr-only">Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fab fa-instagram"></i>
+					<span class="sr-only">Instagram</span>
+				</a>
+			</li>
+		</ul>
+		
+		<ul class="footer-menu">
+			<li><a href="#">運営者情報</a></li>
+			<li><a href="#">プライバシーポリシー</a></li>
+			<li><a href="#">免責事項</a></li>
+			<li><a href="#">お問い合わせ</a></li>
+		</ul>
+		
+		<div class="footer-copy">
+			@ Boards Production.
+		</div>
+	</div>
+</footer>
 
 </body>
-
 </html>
+
