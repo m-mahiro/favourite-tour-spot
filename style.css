@@ -447,93 +447,33 @@ a[href^="https://"]::after {
 
 /* 各画像の表示タイミングを分散させる */
 @keyframes fade1 {
-	
-	0%,
-	15% {
-		opacity: 1;
-	}
-	
-	20%,
-	100% {
-		opacity: 0;
-	}
-	
-	/* 25%から0にしていたのを20%に早めてフェードアウト */
+  0%, 20%   { opacity: 1; }
+  25%, 100% { opacity: 0; }
 }
 
 @keyframes fade2 {
-	
-	0%,
-	19% {
-		opacity: 0;
-	}
-	
-	25%,
-	40% {
-		opacity: 1;
-	}
-	
-	50%,
-	100% {
-		opacity: 0;
-	}
+  0%, 19%   { opacity: 0; }
+  20%, 40%  { opacity: 1; }
+  45%, 100% { opacity: 0; }
 }
 
 @keyframes fade3 {
-	
-	0%,
-	39% {
-		opacity: 0;
-	}
-	
-	45%,
-	60% {
-		opacity: 1;
-	}
-	
-	70%,
-	100% {
-		opacity: 0;
-	}
+  0%, 39%   { opacity: 0; }
+  40%, 60%  { opacity: 1; }
+  65%, 100% { opacity: 0; }
 }
 
 @keyframes fade4 {
-	
-	0%,
-	59% {
-		opacity: 0;
-	}
-	
-	65%,
-	80% {
-		opacity: 1;
-	}
-	
-	90%,
-	100% {
-		opacity: 0;
-	}
+  0%, 59%   { opacity: 0; }
+  60%, 80%  { opacity: 1; }
+  85%, 100% { opacity: 0; }
 }
 
 @keyframes fade5 {
-	
-	0%,
-	79% {
-		opacity: 0;
-	}
-	
-	85%,
-	95% {
-		opacity: 1;
-	}
-	
-	98%,
-	100% {
-		opacity: 0;
-	}
-	
-	/* ここで5枚目をフェードアウトさせる */
+  0%, 79%   { opacity: 0; }
+  80%, 100% { opacity: 1; }
 }
+
 
 /* ----------　ここまで　---------- */
 
