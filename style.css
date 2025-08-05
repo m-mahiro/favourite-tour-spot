@@ -412,70 +412,56 @@ a[href^="https://"]::after {
 
 .slider img:nth-child(1) {
 	animation-name: fade1;
-	animation-duration: 15s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
 }
 
 .slider img:nth-child(2) {
 	animation-name: fade2;
-	animation-duration: 15s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
 }
 
 .slider img:nth-child(3) {
 	animation-name: fade3;
-	animation-duration: 15s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
 }
 
 .slider img:nth-child(4) {
 	animation-name: fade4;
-	animation-duration: 15s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
 }
 
 .slider img:nth-child(5) {
 	animation-name: fade5;
-	animation-duration: 15s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
 }
 
 /* 各画像の表示タイミングを分散させる */
 @keyframes fade1 {
-  0%, 20%   { opacity: 1; }
-  25%, 100% { opacity: 0; }
+  0%, 20%   { opacity: 1; }   /* 0%〜20%の間は画像1が完全に表示される */
+  25%, 100% { opacity: 0; }   /* 25%以降はフェードアウトして非表示に */
 }
 
 @keyframes fade2 {
-  0%, 19%   { opacity: 0; }
-  20%, 40%  { opacity: 1; }
-  45%, 100% { opacity: 0; }
+  0%, 19%   { opacity: 0; }   /* 0%〜19%は非表示 */
+  20%, 40%  { opacity: 1; }   /* 20%〜40%で画像2が表示される */
+  45%, 100% { opacity: 0; }   /* 45%以降フェードアウトして非表示 */
 }
 
 @keyframes fade3 {
-  0%, 39%   { opacity: 0; }
-  40%, 60%  { opacity: 1; }
-  65%, 100% { opacity: 0; }
+  0%, 39%   { opacity: 0; }   /* 0%〜39%は非表示 */
+  40%, 60%  { opacity: 1; }   /* 40%〜60%で画像3が表示される */
+  65%, 100% { opacity: 0; }   /* 65%以降フェードアウト */
 }
 
 @keyframes fade4 {
-  0%, 59%   { opacity: 0; }
-  60%, 80%  { opacity: 1; }
-  85%, 100% { opacity: 0; }
+  0%, 59%   { opacity: 0; }   /* 0%〜59%は非表示 */
+  60%, 80%  { opacity: 1; }   /* 60%〜80%で画像4が表示される */
+  85%, 100% { opacity: 0; }   /* 85%以降フェードアウト */
 }
 
 @keyframes fade5 {
-  0%, 79%   { opacity: 0; }
-  80%, 100% { opacity: 1; }
+  0%, 79%   { opacity: 0; }   /* 0%〜79%は非表示 */
+  80%, 100% { opacity: 1; }   /* 80%〜100%で画像5が表示される */
 }
 
-
 /* ----------　ここまで　---------- */
+
+/* ----------　観光案内（grid）　---------- */
 
 .tourism-section {
 	padding: var(--v-big-space) 0;
@@ -500,11 +486,11 @@ a[href^="https://"]::after {
 
 /* ★ 下段2個はそれぞれ2列目と3列目に配置して真ん中寄りに */
 .tourism-card:nth-child(4) {
-	grid-column: 2 / 3;
+	grid-column: 1 / 2;
 }
 
 .tourism-card:nth-child(5) {
-	grid-column: 3 / 4;
+	grid-column: 2 / 3;
 }
 
 .tourism-card {
