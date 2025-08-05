@@ -161,6 +161,7 @@ header h1 {
 .imgtext-container {
 	display: flex;
 	flex-direction: column;
+	gap: 0.6em;
 	width: 100%;
 	margin: var(--v-space) 0;
 }
