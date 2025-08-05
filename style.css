@@ -43,16 +43,6 @@ img {
 	margin: 0 auto;
 }
 
-.heading-decoration::after {
-	display: block;
-	height: 0;
-	width: clamp(100px, 10vw, 200px);
-	margin-top: 0.6em;
-	border-top: solid 1px var(--accent-color);
-	content: '';
-}
-
-
 /* ---------- ヘッダー ---------- */
 header {
 	background-color: var(--theme-color-light);
@@ -77,6 +67,7 @@ header h1 {
 	text-decoration: none;
 	color: var(--accent-color);
 }
+
 .header-container li {
 	list-style: none;
 }
@@ -100,9 +91,11 @@ header h1 {
 	align-items: center;
 	gap: 10px;
 }
+
 .logo figure {
 	height: 2.5rem;
 }
+
 .logo img {
 	height: 100%;
 	width: auto;
@@ -155,6 +148,7 @@ header h1 {
 	https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14244517679
 	 */
 }
+
 .entry-text p {
 	font-size: 1.5em;
 }
@@ -177,7 +171,7 @@ header h1 {
 	margin: var(--v-space) 0;
 }
 
-.imgtext-container h2  {
+.imgtext-container h2 {
 	font-size: 1.5em;
 }
 
@@ -197,12 +191,12 @@ header h1 {
 		align-items: center;
 	}
 	
-	.imgtext-container > .text {
+	.imgtext-container>.text {
 		flex: 1;
 		min-width: 20em;
 	}
 	
-	.imgtext-container > .img {
+	.imgtext-container>.img {
 		flex: 2
 	}
 	
@@ -325,15 +319,15 @@ a[href^="https://"]::after {
 		gap: 20px;
 	}
 	
-	.footer-container > .footer-site {
+	.footer-container>.footer-site {
 		margin-bottom: 20px;
 	}
 	
-	.footer-container > *:not(.footer-sns) {
+	.footer-container>*:not(.footer-sns) {
 		justify-self: start;
 	}
 	
-	.footer-container > .footer-sns {
+	.footer-container>.footer-sns {
 		grid-column: 2;
 		grid-row: 1 / 4;
 		justify-self: end;
@@ -391,181 +385,249 @@ a[href^="https://"]::after {
 }
 
 .slider {
-  position: relative;
-  width: 100%;
-  max-width: 3951px; /* 元画像の幅 */
-  aspect-ratio: 3951 / 1692; /* 比率固定 */
-  overflow: hidden;
+	position: relative;
+	width: 100%;
+	max-width: 3951px;
+	/* 元画像の幅 */
+	aspect-ratio: 3951 / 1692;
+	/* 比率固定 */
+	overflow: hidden;
 }
 
 
 /* ----------　時間経過で画像が切り替わる　---------- */
 .slider img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 15s; /* 全体で15秒 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 15s;
+	/* 全体で15秒 */
 }
 
 .slider img:nth-child(1) {
-  animation-name: fade1;
-  animation-duration: 15s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+	animation-name: fade1;
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 }
+
 .slider img:nth-child(2) {
-  animation-name: fade2;
-  animation-duration: 15s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+	animation-name: fade2;
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 }
+
 .slider img:nth-child(3) {
-  animation-name: fade3;
-  animation-duration: 15s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+	animation-name: fade3;
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 }
+
 .slider img:nth-child(4) {
-  animation-name: fade4;
-  animation-duration: 15s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+	animation-name: fade4;
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 }
+
 .slider img:nth-child(5) {
-  animation-name: fade5;
-  animation-duration: 15s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+	animation-name: fade5;
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 }
 
 /* 各画像の表示タイミングを分散させる */
-
 @keyframes fade1 {
-  0%, 20%   { opacity: 1; }
-  25%, 100% { opacity: 0; }
+	
+	0%,
+	15% {
+		opacity: 1;
+	}
+	
+	20%,
+	100% {
+		opacity: 0;
+	}
+	
+	/* 25%から0にしていたのを20%に早めてフェードアウト */
 }
 
 @keyframes fade2 {
-  0%, 19%   { opacity: 0; }
-  20%, 40%  { opacity: 1; }
-  45%, 100% { opacity: 0; }
+	
+	0%,
+	19% {
+		opacity: 0;
+	}
+	
+	25%,
+	40% {
+		opacity: 1;
+	}
+	
+	50%,
+	100% {
+		opacity: 0;
+	}
 }
 
 @keyframes fade3 {
-  0%, 39%   { opacity: 0; }
-  40%, 60%  { opacity: 1; }
-  65%, 100% { opacity: 0; }
+	
+	0%,
+	39% {
+		opacity: 0;
+	}
+	
+	45%,
+	60% {
+		opacity: 1;
+	}
+	
+	70%,
+	100% {
+		opacity: 0;
+	}
 }
 
 @keyframes fade4 {
-  0%, 59%   { opacity: 0; }
-  60%, 80%  { opacity: 1; }
-  85%, 100% { opacity: 0; }
+	
+	0%,
+	59% {
+		opacity: 0;
+	}
+	
+	65%,
+	80% {
+		opacity: 1;
+	}
+	
+	90%,
+	100% {
+		opacity: 0;
+	}
 }
 
 @keyframes fade5 {
-  0%, 79%   { opacity: 0; }
-  80%, 100% { opacity: 1; }
+	
+	0%,
+	79% {
+		opacity: 0;
+	}
+	
+	85%,
+	95% {
+		opacity: 1;
+	}
+	
+	98%,
+	100% {
+		opacity: 0;
+	}
+	
+	/* ここで5枚目をフェードアウトさせる */
 }
-
 
 /* ----------　ここまで　---------- */
 
 .tourism-section {
-  padding: var(--v-big-space) 0;
-  background-color: #fffefb;
-  text-align: center;
+	padding: var(--v-big-space) 0;
+	background-color: #fffefb;
+	text-align: center;
 }
 
 .tourism-heading {
-  font-size: 2.5rem;
-  font-family: var(--yuru-font-family);
-  color: var(--accent-color);
-  margin-bottom: var(--v-space);
-  position: relative;
+	font-size: 2.5rem;
+	font-family: var(--yuru-font-family);
+	color: var(--accent-color);
+	margin-bottom: var(--v-space);
+	position: relative;
 }
 
 .tourism-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3列固定 */
-  gap: var(--v-small-space);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/* 3列固定 */
+	gap: var(--v-small-space);
 }
 
 /* ★ 下段2個はそれぞれ2列目と3列目に配置して真ん中寄りに */
 .tourism-card:nth-child(4) {
-  grid-column: 2 / 3;
+	grid-column: 2 / 3;
 }
 
 .tourism-card:nth-child(5) {
-  grid-column: 3 / 4;
+	grid-column: 3 / 4;
 }
 
 .tourism-card {
-  background-color: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  transition: transform 0.3s ease;
+	background-color: white;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1rem;
+	transition: transform 0.3s ease;
 }
 
 .tourism-card:hover {
-  transform: translateY(-5px);
+	transform: translateY(-5px);
 }
 
 .tourism-card img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-bottom: 1rem;
 }
 
 .tourism-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent-color);
-  font-family: var(--yuru-font-family);
+	font-size: 1.3rem;
+	margin-bottom: 0.5rem;
+	color: var(--accent-color);
+	font-family: var(--yuru-font-family);
 }
 
 .tourism-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	margin-bottom: 1rem;
 }
 
 .tourism-btn {
-  align-self: center;
-  padding: 0.5em 1em;
-  background-color: var(--theme-color);
-  color: #fff;
-  font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+	align-self: center;
+	padding: 0.5em 1em;
+	background-color: var(--theme-color);
+	color: #fff;
+	font-weight: bold;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
 }
 
 .tourism-btn:hover {
-  background-color: var(--theme-color-dark);
+	background-color: var(--theme-color-dark);
 }
 
 /*  スマホ対応：1列表示に戻す */
 @media screen and (max-width: 768px) {
-  .tourism-cards {
-    grid-template-columns: 1fr;
-  }
-  
-  .tourism-card:nth-child(4),
-  .tourism-card:nth-child(5) {
-    grid-column: auto;
-  }
+	.tourism-cards {
+		grid-template-columns: 1fr;
+	}
+	
+	.tourism-card:nth-child(4),
+	.tourism-card:nth-child(5) {
+		grid-column: auto;
+	}
 }
