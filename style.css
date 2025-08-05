@@ -127,16 +127,15 @@ header h1 {
 	margin-bottom: var(--v-big-space);
 }
 
-.entry-text .heading-decoration::after {
+.entry-text .heading-decoration + p::before {
+	display: block;
+	height: 0;
 	width: clamp(100px, 200vw, 300px);
-	border-color: var(--theme-color-dark);
-	border-width: 2px;
-	margin-right: 1em;
-	/*
-	`entry-text h1`の右側にマイナスマージンを入れた影響でh1全体が右に動いたので、
-	::afterだけ元に戻すために、margin-rightを1emにする。
-	*/
+	margin: 1em 0 0.6em;
+	border-top: solid 2px var(--accent-color);
+	content: '';
 }
+
 
 .entry-text h1 {
 	font-size: 3em;
@@ -151,11 +150,6 @@ header h1 {
 
 .entry-text p {
 	font-size: 1.5em;
-}
-
-
-.entry-text .heading-decoration+p {
-	margin: 0.6em 0;
 }
 
 /* ---------- 画像とテキスト ---------- */
@@ -179,8 +173,13 @@ header h1 {
 	aspect-ratio: 16/9;
 }
 
-.imgtext-container .heading-decoration+p {
-	margin: 2em 0 1em;
+.imgtext-container .heading-decoration::after {
+	display: block;
+	height: 0;
+	width: clamp(100px, 10vw, 200px);
+	margin: 1em 0 0.6em;
+	border-top: solid 1px var(--theme-color-dark);
+	content: '';
 }
 
 
@@ -384,6 +383,8 @@ a[href^="https://"]::after {
 	list-style: none;
 }
 
+/* ----------　時間経過で画像が切り替わる　---------- */
+
 .slider {
 	position: relative;
 	width: 100%;
@@ -394,8 +395,6 @@ a[href^="https://"]::after {
 	overflow: hidden;
 }
 
-
-/* ----------　時間経過で画像が切り替わる　---------- */
 .slider img {
 	position: absolute;
 	top: 0;
