@@ -13,6 +13,7 @@
 	<meta name="og:description" content="都会のざわめきが遠くなる、和歌山県那智勝浦町「色川」。美しい自然と日本の原風景に癒される、穏やかな時間を紹介します。心静かな「おさんぽ」に出かけてみませんか。">
 	
 	<!-- CSS関係 -->
+	 <link href="hamburgers.css" rel="stylesheet">
 	<link rel="stylesheet" href="../style.css">
 <!--	<link rel="stylesheet" href="style-irokawa.css">-->
 	
@@ -32,8 +33,22 @@
 			</figure>
 			<h1>おさんぽ</h1>
 		</a>
-		
-		<i class="fas fa-bars menu-icon"></i>
+		<button class="navbtn hamburger hamburger--spring" 
+		 onClick="document.querySelector('html').classList.toggle('open');
+		          document.querySelector('.navbtn').classList.toggle('is-active');">
+		  <span class="hamburger-box">
+		      <span class="hamburger-inner"></span>
+		  </span>
+		  <span class="sr-only">MENU</span>
+		</button>
+
+        <nav class="nav">
+			<ul>
+				<li><a href="../index.html">ホーム</a></li>
+				<li><a href="../index.html#target-tourism">観光地一覧</a></li>
+				<li><a href="#">お問い合わせ</a></li>
+			</ul>
+		</nav>
 	</div>
 </header>
 

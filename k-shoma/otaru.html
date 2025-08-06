@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>小樽 | おさんぽ</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="../logo.png" type="image/png">
+	
+	<!-- オープングラフ関係 -->
+	<meta name="og:title" content="小樽 | おさんぽ">
+<!-- og:descriptionは、このサイトの説明を書くところ。特にこだわりが内なら、AIで生成しちゃえ。 -->
+	<meta name="og:description" content="都会のざわめきが遠くなる、和歌山県那智勝浦町「色川」。美しい自然と日本の原風景に癒される、穏やかな時間を紹介します。心静かな「おさんぽ」に出かけてみませんか。">
+	
+	<!-- CSS関係 -->
+	<link href="hamburgers.css" rel="stylesheet">
+	<link rel="stylesheet" href="style-otaru.css">
+<!--	<link rel="stylesheet" href="style-irokawa.css">-->
+	
+	<!-- フォント・アイコン関係 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Maru+Gothic&display=swap">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
+	
+</head>
+<body>
+<header>
+	<div class="header-container w-container">
+		<a class="logo" href="../index.html">
+			<figure class="logo-img">
+				<img src="../logo.png" alt="猫が歩いているアイコン" height="868" width="868">
+			</figure>
+			<h1>おさんぽ</h1>
+		</a>
+		<button class="navbtn hamburger hamburger--spring" 
+		 onClick="document.querySelector('html').classList.toggle('open');
+		          document.querySelector('.navbtn').classList.toggle('is-active');">
+		  <span class="hamburger-box">
+		      <span class="hamburger-inner"></span>
+		  </span>
+		  <span class="sr-only">MENU</span>
+		</button>
+
+        <nav class="nav">
+			<ul>
+				<li><a href="../index.html">ホーム</a></li>
+				<li><a href="../index.html#target-tourism">観光地一覧</a></li>
+				<li><a href="#">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<figure class="entry-img">
+
+<!--	画像は画面サイズに応じて表示範囲が狭まるので、一番見せたいものが中心になるようにあらかじめトリミングしてください。-->
+	
+	<img src="./assets/2.jpg" alt="小樽運河" width="1920" height="980">
+</figure>
+
+<div class="entry-text">
+	<h1 class="heading-decoration title">小樽</h1>
+	<p>北海道　小樽市</p>
+</div>
+
+
+<section class="imgtext w-container">
+	<div class="imgtext-container">
+		<div class="text">
+			<h2 class="heading-decoration">ガラスの美しさを堪能</h2>
+			
+<!--
+
+「画像とテキスト」のテキストについてですが、とくにこだわりがないのならAIに生成させちゃえ！
+ちなみに、僕は下に書いてあるようなプロンプトを使いました。
+昔ながらの日本の景色という雰囲気にしたかったのでこのようなプロンプトにしたので、
+アミューズメント施設など現代的でワンパクな観光地には合わないと思います。
+僕とおなじような雰囲気の観光地ならぜひ使てください。
+写真を添付してから以下のプロンプトを送ってください。上手くいかなければ僕はGeminiを使ったのでGeminiでも試してみて！
+			
+「自然の閑けさを感じる」の説明文を、70字程度の長さで生成して。
+上品で、すこし古風で、わびさびを感じられる、美しい日本語にしてください。
+また、添付した画像はこの説明文に付属するものですので、この写真の雰囲気も踏襲してください。
+例えば、「都会の喧騒を忘れる」なら、「山懐の宵闇に、障子越しの灯りが温かく浮かびます。
+縁側で聞こえるのは、遠い虫の音ばかり。時の流れを忘れ、ただ静かに更けゆく夜に身を委ねる。
+そんな心安らぐひとときが、ここにあります。」などといった文章で、「自然の静けさを感じる」なら、
+「岩間を縫う清らかな川のせせらぎに、心が洗われるよう。苔生した石垣は悠久の時を経て、
+すっかり自然の風景に溶け込みます。ただ佇むだけで満たされる、穏やかな時間がここに流れています。」
+などといった文章を生成してください。
+
+-->
+			<p>
+				小樽のガラス工芸は、職人の技と温もりが光に宿る芸術。繊細で美しく、どこか懐かしい情景を呼び起こしてくれる魅力がある。
+			</p>
+		</div>
+		<figure class="img">
+			<img src="./assets/glass.jpg" alt="ガラス工芸" width="2000" height="1333">
+		</figure>
+	</div>
+	<div class="imgtext-container reverse">
+		<div class="text">
+			<h2 class="heading-decoration">海と歴史、自然が織りなす景観</h2>
+			<p>
+				天狗山は小樽の街と海を一望できる絶景スポット。四季折々の自然と夜景が魅力で、天狗伝説やシマリス公園も楽しめる癒しの場所。
+			</p>
+			
+		</div>
+		<figure class="img">
+			<img src="assets/10038_7_l.jpg" alt="天狗山" width="1280" height="853">
+		</figure>
+	</div>
+</section>
+
+
+<section class="accesses">
+	<div class="w-container">
+		
+		<h2 class="heading">アクセス</h2>
+		
+		
+		<div class="access-container">
+			
+			<div class="access">
+				<h3>関西空港から</h3>
+				<p class="desc">新千歳空港までのルート</p>
+				<p class="travel-time">2時間～</p>
+				<a href="https://www.jtb.co.jp/kokunai_air/a/010201/?airport=KIX.CTS-CTS.KIX&deparea=27" target="_blank" class="btn">ルートを確認する</a>
+			</div>
+			
+			<div class="access">
+				<h3>新千歳空港から</h3>
+				<p class="desc">電車を使うルート</p>
+				<p class="travel-time">1時間40分</p>
+				<a href="https://maps.app.goo.gl/BT48eHYfX8uzmLbH8" target="_blank" class="btn">ルートを確認する</a>
+			</div>
+			
+			<div class="access">
+				<h3>和歌山市から</h3>
+				<p class="desc">電車を使うルート</p>
+				<p class="travel-time">17時間</p>
+				<a href="https://maps.app.goo.gl/4VXsbdgoHRnptZiSA" target="_blank" class="btn">ルートを確認する</a>
+			</div>
+			
+		</div>
+		<div class="map-container">
+			
+			<div class="access-map">
+			
+			
+<!--				iframeは、そのままコピペせずに、widthとheightを削除してください。 -->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186287.73164305295!2d140.9038698690042!3d43.15186682002188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0adfae98ef793b%3A0xa3e7b628d5ad9a1!2z5YyX5rW36YGT5bCP5qi95biC!5e0!3m2!1sja!2sjp!4v1754455123348!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			
+		</div>
+
+	</div>
+
+</section>
+
+
+<footer class="footer">
+	<div class="footer-container w-container">
+		<div class="footer-site">
+			<a href="../index.html">
+				<div class="logo">
+					<figure class="logo-img">
+						<img src="../logo.png" alt="猫が歩いているアイコン" height="868" width="868">
+					</figure>
+					<h1>おさんぽ</h1>
+				</div>
+			</a>
+		</div>
+		
+		<ul class="footer-sns">
+			<li>
+				<a href="#">
+					<i class="fab fa-twitter"></i>
+					<span class="sr-only">Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fab fa-facebook-f"></i>
+					<span class="sr-only">Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fab fa-instagram"></i>
+					<span class="sr-only">Instagram</span>
+				</a>
+			</li>
+		</ul>
+		
+		<ul class="footer-menu">
+			<li><a href="#">運営者情報</a></li>
+			<li><a href="#">プライバシーポリシー</a></li>
+			<li><a href="#">免責事項</a></li>
+			<li><a href="#">お問い合わせ</a></li>
+		</ul>
+		
+		<div class="footer-copy">
+			@ Webデザイン演習B 24班
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
+

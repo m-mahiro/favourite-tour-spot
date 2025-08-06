@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>金沢市 | おさんぽ</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="../logo.png" type="image/png">
+	
+	<!-- オープングラフ関係 -->
+	<meta name="og:title" content="金沢市 | おさんぽ">
+<!-- og:descriptionは、このサイトの説明を書くところ。特にこだわりが内なら、AIで生成しちゃえ。 -->
+	<meta name="og:description" content="加賀百万石の面影が息づく街、金沢。風情ある茶屋街、静けさに包まれた庭園、日常に溶け込む伝統工芸。懐かしさと新しさが、静かに心をほどいていく。心静かな「おさんぽ」に出かけてみませんか。">
+	
+	<!-- CSS関係 -->
+    <link href="hamburgers.css" rel="stylesheet">
+	<link rel="stylesheet" href="style-kanazawa.css">
+	
+	<!-- フォント・アイコン関係 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Maru+Gothic&display=swap">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
+	
+</head>
+<body>
+<header>
+	<div class="header-container w-container">
+		<a class="logo" href="../index.html">
+			<figure class="logo-img">
+				<img src="../logo.png" alt="猫が歩いているアイコン" height="868" width="868">
+			</figure>
+			<h1>おさんぽ</h1>
+		</a>
+		<button class="navbtn hamburger hamburger--spring" 
+		 onClick="document.querySelector('html').classList.toggle('open');
+		          document.querySelector('.navbtn').classList.toggle('is-active');">
+		  <span class="hamburger-box">
+		      <span class="hamburger-inner"></span>
+		  </span>
+		  <span class="sr-only">MENU</span>
+		</button>
+
+        <nav class="nav">
+			<ul>
+				<li><a href="index.html">ホーム</a></li>
+				<li><a href="#target-tourism">観光地一覧</a></li>
+				<li><a href="#">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<figure class="entry-img">
+
+<!--	画像は画面サイズに応じて表示範囲が狭まるので、一番見せたいものが中心になるようにあらかじめトリミングしてください。-->
+	
+	<img src="tyayagai.jpg" alt="色川の棚田" width="3951" height="1692">
+</figure>
+
+<div class="entry-text">
+	<h1 class="heading-decoration title">金沢市</h1>
+	<p>石川県　金沢市</p>
+</div>
+
+
+<section class="imgtext w-container">
+	<div class="imgtext-container">
+		<div class="text">
+			<h2 class="heading-decoration">東山の茶屋街</h2>
+			
+			<p>
+				東山茶屋街は、石畳の小径と格子戸が織りなす情緒豊かな町並み。歴史深い茶屋が軒を連ね、夕暮れ時には静かな灯りが揺れ、時の流れを忘れさせる風雅な空間を醸し出します。
+			</p>
+		</div>
+		<figure class="img">
+			<img src="higashiyama.jfif" alt="東山の茶屋街" width="4032" height="2268">
+		</figure>
+	</div>
+	<div class="imgtext-container reverse">
+		<div class="text">
+			<h2 class="heading-decoration">兼六園（冬）</h2>
+			<p>
+				冬の訪れとともに、庭は雪の衣をまとう。すべてが静かに息をひそめ、心まで澄んでいくようです。凛とした白銀の世界が広がり、雪化粧した松や灯篭が幽玄な美を映し出します。
+			</p>
+			
+		</div>
+		<figure class="img">
+			<img src="kenrokuen.jpg" alt="兼六園" width="4032" height="2268">
+		</figure>
+	</div>
+</section>
+
+
+<section class="accesses">
+	<div class="w-container">
+		
+		<h2 class="heading">アクセス</h2>
+		
+		
+		<div class="access-container">
+			
+			<div class="access">
+				<h3>和歌山市から</h3>
+				<p class="desc">車で行くルート</p>
+				<p class="travel-time">4時間40分</p>
+				<a href="https://maps.app.goo.gl/TUcL67BHBXqqmYFq7" target="_blank" class="btn">ルートを確認する</a>
+			</div>
+			
+			<div class="access">
+				<h3>和歌山市から</h3>
+				<p class="desc">電車で行くルート</p>
+				<p class="travel-time">4時間半</p>
+				<a href="https://maps.app.goo.gl/yAiiHchLof6fuJiDA" target="_blank" class="btn">ルートを確認する</a>
+			</div>
+			
+			<div class="access">
+				<h3>和歌山市から</h3>
+				<p class="desc">徒歩で行くルート</p>
+				<p class="travel-time">77時間</p>
+				<a href="https://maps.app.goo.gl/WW2wy9GwTNqUfSTr5" target="_blank" class="btn">ルートを確認する</a>
+			</div>
+			
+		</div>
+		<div class="map-container">
+			
+			<div class="access-map">
+			
+			
+<!--				iframeは、そのままコピペせずに、widthとheightを削除してください。 -->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d337804.92595201917!2d136.35750190019544!3d36.505649899607135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff83655468566c3%3A0x8df155c46fde6215!2z55-z5bed55yM6YeR5rKi5biC!5e1!3m2!1sja!2sjp!4v1754473736570!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			
+		</div>
+
+	</div>
+
+</section>
+
+
+<footer class="footer">
+	<div class="footer-container w-container">
+		<div class="footer-site">
+			<a href="../index.html">
+				<div class="logo">
+					<figure class="logo-img">
+						<img src="../logo.png" alt="猫が歩いているアイコン" height="868" width="868">
+					</figure>
+					<h1>おさんぽ</h1>
+				</div>
+			</a>
+		</div>
+		
+		<ul class="footer-sns">
+			<li>
+				<a href="#">
+					<i class="fab fa-twitter"></i>
+					<span class="sr-only">Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fab fa-facebook-f"></i>
+					<span class="sr-only">Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fab fa-instagram"></i>
+					<span class="sr-only">Instagram</span>
+				</a>
+			</li>
+		</ul>
+		
+		<ul class="footer-menu">
+			<li><a href="#">運営者情報</a></li>
+			<li><a href="#">プライバシーポリシー</a></li>
+			<li><a href="#">免責事項</a></li>
+			<li><a href="#">お問い合わせ</a></li>
+		</ul>
+		
+		<div class="footer-copy">
+			@ Webデザイン演習B 24班
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

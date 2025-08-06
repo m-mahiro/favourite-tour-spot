@@ -15,7 +15,9 @@
 	">
 	
 	<!-- CSS関係 -->
+	<link href="hamburgers.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+
 	
 	<!-- フォント・アイコン関係 -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,17 +35,31 @@
 			</figure>
 			<h1>おさんぽ</h1>
 		</a>
-		
-		<i class="fas fa-bars menu-icon"></i>
+		<button class="navbtn hamburger hamburger--spring" 
+		 onClick="document.querySelector('html').classList.toggle('open');
+		          document.querySelector('.navbtn').classList.toggle('is-active');">
+		  <span class="hamburger-box">
+		      <span class="hamburger-inner"></span>
+		  </span>
+		  <span class="sr-only">MENU</span>
+		</button>
+
+		<nav class="nav">
+			<ul>
+				<li><a class="a-1" href="index.html">ホーム</a></li>
+				<li><a href="#target-tourism">観光地一覧</a></li>
+				<li><a href="#">お問い合わせ</a></li>
+			</ul>
+		</nav>
 	</div>
 </header>
 
 <div class="slider">
   <img src="m-mahiro/assets/irokawa-main-neo.jpg" alt="写真1" />
-  <img src="yamada/TK2.jpg" alt="写真2" />
+  <img src="y-naoto/TK2.jpg" alt="写真2" />
   <img src="y-ryusei/assets/arima.sight1.jpg" alt="写真3" />
-  <img src="yamada/OG1.jpg" alt="写真4" />
-  <img src="yamada/OG2.jpg" alt="写真5" />
+  <img src="k-shoma/assets/2.jpg" alt="写真4" />
+  <img src="e-tomoharu/tyayagai.jpg" alt="写真5" />
 </div>
 
 <div class="entry-text">
@@ -51,7 +67,7 @@
 	<p>日本各地</p>
 </div>
 
-<section class="tourism-section w-container">
+<section id="target-tourism" class="tourism-section w-container">
   <h2 class="tourism-heading">観光スポット一覧</h2>
 
   <div class="tourism-cards">
@@ -65,10 +81,10 @@
     </div>
 
     <div class="tourism-card">
-      <img src="yamada/TK2.jpg" alt="香川県">
+      <img src="y-naoto/TK2.jpg" alt="香川県">
       <h3>香川県</h3>
       <p>うどんだけじゃない香川の旅。瀬戸内海に面した美しい景観と、父母ヶ浜の幻想的なリフレクション。アートと自然、歴史が織りなす、心ほどける時間が待っています。</p>
-      <a href="yamada/kagawa.html" class="tourism-btn">詳しく見る</a>
+      <a href="y-naoto/kagawa.html" class="tourism-btn">詳しく見る</a>
     </div>
 
     <div class="tourism-card">
@@ -79,17 +95,17 @@
     </div>
 
     <div class="tourism-card">
-      <img src="" alt="観光地名">
-      <h3>ああああああ</h3>
-      <p>説明文</p>
-      <a href="#" class="tourism-btn">詳しく見る</a>
+      <img src="k-shoma/assets/2.jpg" alt="小樽市">
+      <h3>小樽市</h3>
+      <p>うつろう季節の中で、ふと立ち止まりたくなったら小樽へ。石畳の道、海風に揺れる運河、手のひらにおさまる硝子の温もり。懐かしさと新しさが交差するこの街で、静かに心がほどけていく。</p>
+      <a href="k-shoma/otaru.html" class="tourism-btn">詳しく見る</a>
     </div>
 
     <div class="tourism-card">
-      <img src="" alt="観光地名">
-      <h3>ああああああ</h3>
-      <p>説明文</p>
-      <a href="#" class="tourism-btn">詳しく見る</a>
+      <img src="e-tomoharu/tyayagai.jpg" alt="観光地名">
+      <h3>金沢市</h3>
+      <p>雨音が似合う街並み、風情あふれる茶屋街、そっと心に灯る金箔のきらめき。伝統が日常に溶け込むこの場所で、静かに時の流れに身をゆだねる。</p>
+      <a href="e-tomoharu/kanazawa.html" class="tourism-btn">詳しく見る</a>
     </div>
   </div>
 </section>

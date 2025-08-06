@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>観光案内サイト</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="logo.png" type="image/png">
+	
+	<!-- オープングラフ関係 -->
+	<meta name="og:title" content="色川 | おさんぽ">
+	<meta name="og:description" content="
+		ここはこのサイトの説明を書くところ。特にこだわりが内なら、AIで生成しちゃえ。
+		文章の長さは、大体これくらいかこれの2倍ぐらい
+	">
+	
+	<!-- CSS関係 -->
+	<link href="hamburgers.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+	
+	<!-- フォント・アイコン関係 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Maru+Gothic&display=swap">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
+	
+</head>
+<body>
+<header>
+	<div class="header-container w-container">
+		<a class="logo" href="index.html">
+			<figure class="logo-img">
+				<img src="logo.png" alt="猫が歩いているアイコン" height="868" width="868">
+			</figure>
+			<h1>おさんぽ</h1>
+		</a>
+		<button class="navbtn hamburger hamburger--spring" 
+		 onClick="document.querySelector('html').classList.toggle('open');
+		          document.querySelector()">
+		  <span class="hamburger-box">
+		      <span class="hamburger-inner"></span>
+		  </span>
+		  <span class="sr-only">MENU</span>
+		</button>
+
+		<nav class="nav">
+			<ul>
+				<li><a class="a-1" href="../index.html">ホーム</a></li>
+				<li><a href="#target-tourism">観光地一覧</a></li>
+				<li><a href="#">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="slider">
+  <img src="m-mahiro/assets/irokawa-main-neo.jpg" alt="写真1" />
+  <img src="y-naoto/TK2.jpg" alt="写真2" />
+  <img src="y-ryusei/assets/arima.sight1.jpg" alt="写真3" />
+  <img src="k-shoma/assets/2.jpg" alt="写真4" />
+  <img src="e-tomoharu/tyayagai.jpg" alt="写真5" />
+</div>
+
+<div class="entry-text">
+	<h1 class="heading-decoration title">観光案内</h1>
+	<p>日本各地</p>
+</div>
+
+<section id="target-tourism" class="tourism-section w-container">
+  <h2 class="tourism-heading">観光スポット一覧</h2>
+
+  <div class="tourism-cards">
+    <div class="tourism-card">
+      <img src="m-mahiro/assets/irokawa-main-neo.jpg" alt="観光地名" height="1692" width="3951">
+      <h3>色川地区</h3>
+      <p>
+	      繰り返しの毎日、せわしい都会の日常に気疲れしてしまった時は色川に癒されに行きましょう。美しい棚田や手つかずの自然はあなたの心を満たしてくれることでしょう。
+      </p>
+      <a href="m-mahiro/irokawa.html" class="tourism-btn">詳しく見る</a>
+    </div>
+
+    <div class="tourism-card">
+      <img src="y-naoto/TK2.jpg" alt="香川県">
+      <h3>香川県</h3>
+      <p>うどんだけじゃない香川の旅。瀬戸内海に面した美しい景観と、父母ヶ浜の幻想的なリフレクション。アートと自然、歴史が織りなす、心ほどける時間が待っています。</p>
+      <a href="y-naoto/kagawa.html" class="tourism-btn">詳しく見る</a>
+    </div>
+
+    <div class="tourism-card">
+      <img src="y-ryusei/assets/arima.sight1.jpg" alt="有馬温泉">
+      <h3>有馬温泉</h3>
+      <p>有馬温泉は日本三古湯のひとつに数えられる歴史ある温泉地です。金泉と銀泉の異なる湯を楽しめ、歴史ある街並みと豊かな自然が心と体を癒してくれます。</p>
+      <a href="y-ryusei/arima.html" class="tourism-btn">詳しく見る</a>
+    </div>
+
+    <div class="tourism-card">
+      <img src="k-shoma/assets/2.jpg" alt="小樽市">
+      <h3>小樽市</h3>
+      <p>石畳の道、海風に揺れる運河、手のひらにおさまる硝子の温もり。懐かしさと新しさが交差するこの街で、静かに心がほどけていく。</p>
+      <a href="k-shoma/otaru.html" class="tourism-btn">詳しく見る</a>
+    </div>
+
+    <div class="tourism-card">
+      <img src="e-tomoharu/tyayagai.jpg" alt="観光地名">
+      <h3>金沢市</h3>
+      <p>雨音が似合う街並み、風情あふれる茶屋街、そっと心に灯る金箔のきらめき。伝統が日常に溶け込むこの場所で、静かに時の流れに身をゆだねる。</p>
+      <a href="e-tomoharu/kanazawa.html" class="tourism-btn">詳しく見る</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+	<div class="footer-container w-container">
+		<div class="footer-site">
+			<a href="index.html">
+				<div class="logo">
+					<figure class="logo-img">
+						<img src="logo.png" alt="猫が歩いているアイコン" height="868" width="868">
+					</figure>
+					<h1>おさんぽ</h1>
+				</div>
+			</a>
+		</div>
+		
+		<ul class="footer-sns">
+			<li>
+				<a href="#">
+					<i class="fab fa-twitter"></i>
+					<span class="sr-only">Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fab fa-facebook-f"></i>
+					<span class="sr-only">Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fab fa-instagram"></i>
+					<span class="sr-only">Instagram</span>
+				</a>
+			</li>
+		</ul>
+		
+		<ul class="footer-menu">
+			<li><a href="#">運営者情報</a></li>
+			<li><a href="#">プライバシーポリシー</a></li>
+			<li><a href="#">免責事項</a></li>
+			<li><a href="#">お問い合わせ</a></li>
+		</ul>
+		
+		<div class="footer-copy">
+			@ Webデザイン演習B 24班
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
+
